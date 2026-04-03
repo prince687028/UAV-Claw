@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UAV Claw project page">
+  <meta property="og:title" content="UAV Claw">
+  <meta property="og:description" content="A focused project page for UAV Claw.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="static/images/show.png">
+  <meta name="twitter:title" content="UAV Claw">
+  <meta name="twitter:description" content="A focused project page for UAV Claw.">
+  <meta name="twitter:image" content="static/images/show.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <title>UAV Claw</title>
+  <link rel="icon" type="image/svg+xml" href="static/images/uav-claw-logo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="hero-panel">
+      <h1 class="page-title">UAV Claw</h1>
+      <p class="author-line">
+        Xiangyu Wang, Donglin Yang, Wenhao Zheng, Zimu Tang, Zhibo Zhang, Yantong Zhong, Xiangyi Zheng, Qinan Liao, Si Liu
+      </p>
+    </section>
+
+    <section class="content-grid">
+      <article class="content-card intro-card" data-lang-root data-current-lang="en">
+        <div class="intro-topbar">
+          <div>
+            <p class="section-label">Introduction</p>
+          </div>
+          <div class="lang-toggle" role="tablist" aria-label="Introduction language switch">
+            <button type="button" class="lang-button is-active" data-lang-button="en" aria-pressed="true">EN</button>
+            <button type="button" class="lang-button" data-lang-button="zh" aria-pressed="false">中文</button>
+          </div>
+        </div>
+
+        <div class="intro-copy is-active" data-lang-panel="en">
+          <h2>An embodied aerial agent for real-world autonomy.</h2>
+          <p>
+            UAV Claw is a project that brings language-driven agents from the screen into the physical world through
+            an autonomous aerial platform. Built on the integration of OpenClaw for task reasoning, an MCP-based tool
+            orchestration layer, and a vision-language-action control loop, UAV Claw enables a drone to understand
+            natural-language instructions, perceive its environment, and execute multi-step tasks in open 3D space.
+          </p>
+          <p>
+            The system is designed to move beyond manual piloting and fixed waypoint scripts. Given an open-ended
+            command, UAV Claw can decompose the goal into actionable steps and coordinate perception, localization,
+            flight control, and camera operation within a unified framework. This makes it suitable for real-world
+            scenarios such as inspection, search, reconnaissance, and agile flight, highlighting a practical path
+            toward embodied aerial intelligence.
+          </p>
+        </div>
+
+        <div class="intro-copy" data-lang-panel="zh" lang="zh-CN">
+          <h2>面向真实世界自主任务的空中具身智能体。</h2>
+          <p>
+            UAV Claw 致力于将原本停留在数字空间中的语言智能体，扩展到真实物理世界中的自主空中平台。系统融合了
+            OpenClaw 的任务推理能力、基于 MCP 的工具编排框架，以及视觉-语言-动作闭环控制能力，使无人机能够理解
+            自然语言指令、感知周围环境，并在开放三维空间中自主完成多步骤任务。
+          </p>
+          <p>
+            相比依赖人工遥控或预设航点脚本的传统方式，UAV Claw 可以根据开放式指令自动拆解任务目标，并在统一框架下
+            协调感知、定位、飞控与相机操作。这使其能够应用于巡检、搜索、侦察和敏捷飞行等真实场景，展示出空中具身
+            智能从概念走向落地系统的实际路径。
+          </p>
+        </div>
+      </article>
+
+      <article class="content-card video-card">
+        <div class="video-header">
+          <p class="section-label">Video</p>
+          <h2>Project demonstration</h2>
+        </div>
+        <div class="video-frame">
+          <video controls muted autoplay loop playsinline poster="static/images/show.png">
+            <source src="static/videos/草稿v1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script>
+    const introRoots = document.querySelectorAll("[data-lang-root]");
+
+    introRoots.forEach((root) => {
+      const buttons = root.querySelectorAll("[data-lang-button]");
+      const panels = root.querySelectorAll("[data-lang-panel]");
+
+      const setLanguage = (lang) => {
+        root.dataset.currentLang = lang;
+
+        buttons.forEach((button) => {
+          const isActive = button.dataset.langButton === lang;
+          button.classList.toggle("is-active", isActive);
+          button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        });
+
+        panels.forEach((panel) => {
+          panel.classList.toggle("is-active", panel.dataset.langPanel === lang);
+        });
+      };
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => setLanguage(button.dataset.langButton));
+      });
+    });
+  </script>
+</body>
+</html>

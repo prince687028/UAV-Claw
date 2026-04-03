@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700" role="img" aria-labelledby="title desc">
+  <title id="title">UAV Claw logo</title>
+  <desc id="desc">A stylized blue quadcopter with red claw arms inside circular linework and arced UAV Claw text.</desc>
+  <defs>
+    <linearGradient id="navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f6d9f"/>
+      <stop offset="100%" stop-color="#123c63"/>
+    </linearGradient>
+    <linearGradient id="navy-soft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4e88b7"/>
+      <stop offset="100%" stop-color="#1e507a"/>
+    </linearGradient>
+    <linearGradient id="claw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a59"/>
+      <stop offset="100%" stop-color="#e43a25"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#07243d" flood-opacity="0.18"/>
+    </filter>
+    <path id="title-arc" d="M 148 250 A 205 205 0 0 1 552 250"/>
+    <mask id="left-claw-mask" maskUnits="userSpaceOnUse">
+      <rect width="700" height="700" fill="black"/>
+      <path d="M 0 0 C -58 10 -113 66 -128 141 C -141 205 -118 252 -61 265 C -11 276 57 252 75 197 C 91 150 75 94 43 46 C 28 23 16 5 0 0 Z" transform="translate(232 428) rotate(-18)" fill="white"/>
+      <path d="M 4 71 C -18 110 -34 150 -26 194 C -21 222 -3 232 24 228 C 51 224 67 202 69 171 C 71 134 56 102 30 67 Z" transform="translate(232 428) rotate(-18)" fill="black"/>
+      <path d="M -63 180 C -40 151 -10 130 22 118 C 10 156 -12 183 -51 204 Z" transform="translate(232 428) rotate(-18)" fill="black"/>
+    </mask>
+    <mask id="right-claw-mask" maskUnits="userSpaceOnUse">
+      <rect width="700" height="700" fill="black"/>
+      <path d="M 0 0 C 58 10 113 66 128 141 C 141 205 118 252 61 265 C 11 276 -57 252 -75 197 C -91 150 -75 94 -43 46 C -28 23 -16 5 0 0 Z" transform="translate(468 428) rotate(18)" fill="white"/>
+      <path d="M -4 71 C 18 110 34 150 26 194 C 21 222 3 232 -24 228 C -51 224 -67 202 -69 171 C -71 134 -56 102 -30 67 Z" transform="translate(468 428) rotate(18)" fill="black"/>
+      <path d="M 63 180 C 40 151 10 130 -22 118 C -10 156 12 183 51 204 Z" transform="translate(468 428) rotate(18)" fill="black"/>
+    </mask>
+  </defs>
+
+  <g fill="none" stroke="#123f63" stroke-linecap="round">
+    <circle cx="350" cy="350" r="325" stroke-width="10"/>
+    <circle cx="350" cy="350" r="262" stroke-width="10"/>
+    <path d="M 110 410 A 250 250 0 0 0 147 548" stroke-width="10"/>
+    <path d="M 590 410 A 250 250 0 0 1 553 548" stroke-width="10"/>
+    <path d="M 150 575 A 290 290 0 0 0 550 575" stroke-width="10"/>
+    <path d="M 170 281 A 208 208 0 0 1 530 281" stroke-width="9"/>
+  </g>
+
+  <text font-family="Manrope, 'Segoe UI', sans-serif" font-size="72" font-weight="800" letter-spacing="3" fill="#123f63">
+    <textPath href="#title-arc" startOffset="50%" text-anchor="middle">UAV Claw</textPath>
+  </text>
+
+  <g filter="url(#shadow)" stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="url(#navy-soft)" stroke-width="16">
+      <path d="M 305 338 L 178 313"/>
+      <path d="M 398 330 L 522 308"/>
+      <path d="M 322 286 L 260 216"/>
+      <path d="M 410 284 L 494 230"/>
+    </g>
+
+    <g fill="url(#navy)" stroke="#123c63" stroke-width="9">
+      <g transform="translate(178 313)">
+        <circle cx="0" cy="0" r="21"/>
+        <ellipse cx="-45" cy="-4" rx="42" ry="12" transform="rotate(-8)"/>
+        <ellipse cx="45" cy="2" rx="42" ry="12" transform="rotate(8)"/>
+      </g>
+      <g transform="translate(522 308)">
+        <circle cx="0" cy="0" r="21"/>
+        <ellipse cx="-45" cy="-2" rx="42" ry="12" transform="rotate(-8)"/>
+        <ellipse cx="45" cy="-2" rx="42" ry="12" transform="rotate(8)"/>
+      </g>
+      <g transform="translate(260 216)">
+        <circle cx="0" cy="0" r="18"/>
+        <ellipse cx="-34" cy="-4" rx="32" ry="10" transform="rotate(-8)"/>
+        <ellipse cx="35" cy="-4" rx="32" ry="10" transform="rotate(8)"/>
+      </g>
+      <g transform="translate(494 230)">
+        <circle cx="0" cy="0" r="18"/>
+        <ellipse cx="-35" cy="-4" rx="32" ry="10" transform="rotate(-8)"/>
+        <ellipse cx="35" cy="-4" rx="32" ry="10" transform="rotate(8)"/>
+      </g>
+    </g>
+
+    <g transform="translate(352 334) rotate(-10)">
+      <ellipse cx="0" cy="0" rx="118" ry="86" fill="url(#navy)" stroke="#123c63" stroke-width="10"/>
+      <path d="M -64 -39 C -30 -83 31 -95 77 -54" fill="none" stroke="#d9effd" stroke-width="8"/>
+      <path d="M -29 -64 C -10 -80 13 -80 25 -64" fill="none" stroke="#edf8ff" stroke-width="8"/>
+    </g>
+
+    <g fill="none" stroke="url(#claw)" stroke-width="16">
+      <path d="M 282 392 C 253 426 231 452 216 488"/>
+      <path d="M 418 392 C 447 426 469 452 484 488"/>
+    </g>
+
+    <g fill="url(#claw)" stroke="#d43b26" stroke-width="8">
+      <circle cx="264" cy="418" r="12"/>
+      <circle cx="229" cy="460" r="11"/>
+      <circle cx="436" cy="418" r="12"/>
+      <circle cx="471" cy="460" r="11"/>
+    </g>
+
+    <path d="M 0 0 C -58 10 -113 66 -128 141 C -141 205 -118 252 -61 265 C -11 276 57 252 75 197 C 91 150 75 94 43 46 C 28 23 16 5 0 0 Z" transform="translate(232 428) rotate(-18)" fill="url(#claw)" stroke="#d43b26" stroke-width="8" mask="url(#left-claw-mask)"/>
+    <path d="M 0 0 C 58 10 113 66 128 141 C 141 205 118 252 61 265 C 11 276 -57 252 -75 197 C -91 150 -75 94 -43 46 C -28 23 -16 5 0 0 Z" transform="translate(468 428) rotate(18)" fill="url(#claw)" stroke="#d43b26" stroke-width="8" mask="url(#right-claw-mask)"/>
+  </g>
+</svg>
